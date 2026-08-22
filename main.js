@@ -130,7 +130,6 @@ function initRouter() {
   const viewEssay = document.getElementById('view-essay');
   const viewSas = document.getElementById('view-sas');
   const viewEsas = document.getElementById('view-esas');
-  const navSasLink = document.getElementById('nav-sas-link');
 
   function updateRoute(pathname, pushState = true) {
     const isEsas = pathname.includes('/esas') || window.location.hash === '#esas';
@@ -139,7 +138,6 @@ function initRouter() {
     if (viewEssay) viewEssay.style.display = (!isSas && !isEsas) ? 'block' : 'none';
     if (viewSas) viewSas.style.display = isSas ? 'block' : 'none';
     if (viewEsas) viewEsas.style.display = isEsas ? 'block' : 'none';
-    if (navSasLink) navSasLink.style.display = (!isSas && !isEsas) ? 'inline-flex' : 'none';
 
     window.scrollTo(0, 0);
 

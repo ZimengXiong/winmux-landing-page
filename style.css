@@ -61,17 +61,28 @@ body {
 }
 
 /* ==========================================================================
-   Top Floating Nav (GitHub + Short Attention Span Link)
+   Navigation Headers (In-flow, Clean on Desktop & Mobile)
    ========================================================================== */
 
-.top-floating-nav {
-  position: fixed;
-  top: 24px;
-  right: 28px;
-  z-index: 999;
+.essay-nav-header {
   display: flex;
   align-items: center;
-  gap: 16px;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.essay-nav-brand {
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 13.5px;
+  letter-spacing: -0.01em;
+}
+
+.header-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 
 .sas-link {
@@ -81,6 +92,7 @@ body {
   opacity: 0.85;
   text-decoration: none !important;
   transition: opacity 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
 }
 
 .sas-link:hover {
@@ -107,7 +119,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
+  width: 100%;
+  gap: 12px;
 }
 
 .back-link {
@@ -118,6 +132,7 @@ body {
   text-decoration: none !important;
   display: inline-block;
   transition: opacity 0.15s ease;
+  white-space: nowrap;
 }
 
 .back-link:hover {
@@ -131,21 +146,67 @@ body {
   opacity: 0.85;
   text-decoration: none !important;
   transition: opacity 0.15s ease;
+  white-space: nowrap;
 }
 
 .sub-sas-link:hover {
   opacity: 1;
 }
 
-@media (max-width: 600px) {
-  .top-floating-nav {
-    top: 16px;
-    right: 16px;
+@media (max-width: 640px) {
+  body {
+    padding: 20px 16px;
+  }
+
+  .essay-nav-header {
+    margin-bottom: 18px;
+  }
+
+  .sas-nav-row {
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .header-nav-right {
     gap: 10px;
   }
 
-  .sas-link {
+  .sas-link,
+  .sub-sas-link {
     font-size: 11.5px;
+  }
+
+  .back-link {
+    font-size: 12px;
+  }
+
+  .header-title {
+    font-size: 24px;
+  }
+
+  .header-logo {
+    width: 54px;
+    height: 54px;
+  }
+
+  .media-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .heading-depth-1 {
+    margin: 36px 0 14px 0;
+    font-size: 14.5px;
+  }
+
+  .heading-depth-2 {
+    margin: 28px 0 10px 0;
+  }
+
+  pre {
+    padding: 10px 12px;
+    font-size: 12px;
   }
 }
 
