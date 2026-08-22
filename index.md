@@ -44,7 +44,7 @@ i only use this as an example of why the space connotation is confusing, (person
 ![](macos-mission-control-settings.png)
 tangential—but i really want to emphasize the atrocity that is the first option, which (on by default) allows macOS to MOVE YOUR SPACES AROUND so that what was `Space 1` could be `Space 4`, causing you to lose all spatial awareness of your already confusing enough virtual desktops
 
-what i really want to talk about is the second to last item on the list,
+what i really want to talk about is the -2nd item on the list,
 ```
 Displays have separate Spaces
 ```
