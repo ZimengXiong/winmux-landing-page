@@ -80,10 +80,11 @@ this means all displays can access all of the spaces, and makes understanding mu
 you might think it is trivial, but window managers like [Yabai](https://github.com/koekeishiya/yabai) and [AeroSpace](https://github.com/nikitabobko/AeroSpace) STRUGGLE to handle multiple monitors because they are still stuck on trying to replicate macOS's `Displays have separate Spaces`. WMs kill themselves trying to do this.
 
 # empty spaces shouldn't exist
-this also means that empty spaces FUNDAMENTALLY SHOULD NOT EXIST. there is NO POINT in "reserving a space" for future use. here's what it looks like when you move the last window in a workspace to another workspace:
+this also means that empty spaces FUNDAMENTALLY SHOULD NOT EXIST. there is NO POINT in "reserving a space" for future use (you wouldn't open an empty file). here's what it looks like when you move the last window in a workspace to another workspace:
 
 ![notice how what was "workspace 2" vanishes once its last child is destroyed](disappearing-workspaces.mp4)
 
+the only type of empty workspace we allow if it is the N+1 where N is the last occupied workspace, this allows you to temporarily create a empty workspace to open new windows in, but if you leave without doing so, the workspace gets garbage collected
 
 winmux does both of these well, and supports multi-monitor in an intuitive way like nothing else i have tried
 
