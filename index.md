@@ -60,7 +60,7 @@ yes, and you should. but what i wanted to highlight here is the mere existence o
 ## a better approach to understanding virtual desktops
 there have been so many similar virtualization technologies that have emerged it shocks me that we are this behind on virtual desktops 
 
-instead of being the greedy beings we are and wishing for more physical monitors, start thinking about Spaces as purely virtual blobs with no physical representation.
+instead of being the greedy beings we are and wishing for more physical monitors, start thinking about spaces as purely virtual blobs with no physical representation.
 
 they are instead, somewhat analogous to files (isn't everything? very [UNIX](https://en.wikipedia.org/wiki/Unix) indeed) and file managers.
 
@@ -77,19 +77,19 @@ when you want to observe a file, you open a file viewer. if you want to observe 
 
 this means all displays can access all of the spaces, and makes understanding multi-monitor window managers so much easier.
 
-you might think it is trivial, but window managers like [Yabai](https://github.com/koekeishiya/yabai) and [AeroSpace](https://github.com/nikitabobko/AeroSpace) STRUGGLE to handle multiple monitors because they are still stuck on trying to replicate macOS's `Displays have separate Spaces`. WMs kill themselves trying to do this.
+you might think it is trivial, but window managers like [Yabai](https://github.com/koekeishiya/yabai) and [AeroSpace](https://github.com/nikitabobko/AeroSpace) STRUGGLE to handle multiple monitors because they are still stuck on trying to replicate macOS's `Displays have separate Spaces`. window managers kill themselves trying to do this.
 
 # empty spaces shouldn't exist
 this also means that empty spaces FUNDAMENTALLY SHOULD NOT EXIST. there is NO POINT in "reserving a space" for future use (you wouldn't open an empty file). here's what it looks like when you move the last window in a workspace to another workspace:
 
 ![notice how what was "workspace 2" vanishes once its last child is destroyed](disappearing-workspaces.mp4)
 
-the only type of empty workspace we allow if it is the N+1 where N is the last occupied workspace, this allows you to temporarily create a empty workspace to open new windows in, but if you leave without doing so, the workspace gets garbage collected
+the only type of empty workspace we allow is the N+1 (where N is the last occupied workspace). this allows you to temporarily create an empty workspace to open new windows in, but if you leave without doing so, the workspace gets garbage-collected.
 
 winmux does both of these well, and supports multi-monitor in an intuitive way like nothing else i have tried
 
 # WHERE ARE ALL MY SPACES? FIND ME MY WINDOWS!
-when you install a window manager like [AeroSpace](https://github.com/nikitabobko/AeroSpace), you are left quite baffled at where things are. am i on workspace A, B, or C? how do I know? oh wait, there's a menu bar icon, let me click that...
+when you install a window manager like [AeroSpace](https://github.com/nikitabobko/AeroSpace), you are left quite baffled at where things are. am i on workspace A, B, or C? how do i know? oh wait, there's a menu bar icon, let me click that...
 ![](aerospace-menubar-icon.png)
 
 thanks! now i know where everything is...
@@ -148,9 +148,9 @@ and yes, you can configure whether new windows opened while focused on a tab gro
 
 # zero click config
 
-winmux doesn't require disabling [SIP](https://en.wikipedia.org/wiki/System_Integrity_Protection) (it's built on the fantastic virtualization framework of [AeroSpace](https://github.com/nikitabobko/AeroSpace)), nor does it require you to write a config file! (still uses it for a SSOT, but you don't ever need to see it). it ships with (my) defaults or adopts existing AeroSpace configurations. you can do (most) things via GUI :)
+winmux doesn't require disabling [SIP](https://en.wikipedia.org/wiki/System_Integrity_Protection) (it's built on the fantastic virtualization framework of [AeroSpace](https://github.com/nikitabobko/AeroSpace)), nor does it require you to write a config file! (still uses it as a single source of truth, but you don't ever need to see it). it ships with (my) defaults or adopts existing AeroSpace configurations. you can do (most) things via a GUI :)
 
-![(yes i know the keyboard shortcut input fields look weird, i'm trying to figure that out, it's a macOS 27 Beta thing)](winmux-settings-gui.gif)
+![(yes i know the keyboard shortcut input fields look weird, i'm trying to figure that out, it's a macOS 27 beta thing)](winmux-settings-gui.gif)
 
 # tap tap tap
 
@@ -164,7 +164,7 @@ winmux supports a special type of keyboard shortcut: single taps:
 
 i REALLY like this feature. i have my dock hidden (always) and don't like using [Spotlight](https://support.apple.com/guide/mac-help/spotlight-mchlp1008/mac) (or [Raycast](https://www.raycast.com/)) to launch my most used app (my browser).
 
-so i map my left option and right command keys to launch a new window of my respective browser profiles. i do the same for my second commonly used applications: [Terminal](https://en.wikipedia.org/wiki/Terminal_(macOS)) and [Finder](https://en.wikipedia.org/wiki/macOS_Finder) with CMD+{E, D}
+so i map my left option and right command keys to launch a new window of my respective browser profiles. i do the same for my second commonly used applications: [Terminal](https://en.wikipedia.org/wiki/Terminal_(macOS)) and [Finder](https://en.wikipedia.org/wiki/macOS_Finder) with Cmd+{E, D}
 
 i cannot convey in words how nice this is, you need to try it yourself.
 
