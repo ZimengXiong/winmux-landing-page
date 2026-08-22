@@ -4,34 +4,222 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>winmux</title>
-  <style>
-    body {
-      margin: 0;
-      background: #111;
-      color: #fff;
-      font: 18px/1.4 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-    }
-
-    main {
-      padding: 32px;
-    }
-
-    img {
-      display: block;
-      width: 120px;
-      height: auto;
-      margin-bottom: 24px;
-    }
-
-    p {
-      margin: 0;
-    }
-  </style>
+  <meta name="description" content="A powerful project-based, sidebar-first window manager for macOS. Tab groups, intent zones, multi-monitor support, and projects that just make sense.">
+  <link rel="icon" href="/winmux-logo.svg" type="image/svg+xml">
 </head>
 <body>
-  <main>
-    <img src="/winmux-logo.svg" alt="WinMux">
-    <p>winmux is a really really good window manager for macOS. it is unlike anything you have seen.</p>
+  <!-- Top Nav for Essay Page -->
+  <nav class="top-floating-nav" id="top-floating-nav" aria-label="Quick links">
+    <a href="/sas" class="sas-link" id="nav-sas-link">[ short attention span? ]</a>
+    <a href="https://github.com/ZimengXiong/winmux" target="_blank" rel="noopener noreferrer" class="fixed-github-link" aria-label="GitHub Repository">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+      </svg>
+    </a>
+  </nav>
+
+  <main class="content">
+    <!-- View 1: Essay (Default on /) -->
+    <div id="view-essay" class="page-view">
+      <div id="markdown-app"></div>
+    </div>
+
+    <!-- View 2: SAS (In-depth Walkthrough Video on /sas) -->
+    <div id="view-sas" class="page-view" style="display: none;">
+      <div class="sas-header">
+        <div class="sas-nav-row">
+          <a href="/" class="back-link">&lt;-- back to essay</a>
+          <a href="/esas" class="sub-sas-link" id="link-to-esas">[ even shorter attention span? ]</a>
+        </div>
+        
+        <div class="header-branding">
+          <img src="/winmux-logo.svg" alt="winmux logo" class="header-logo" />
+          <div>
+            <h1 class="header-title">
+              <span class="wm-w">w</span><span class="wm-i">i</span><span class="wm-n">n</span><span class="wm-m">m</span><span class="wm-u">u</span><span class="wm-x">x</span>
+            </h1>
+            <p class="header-subtitle">sidebar-first window manager for macOS</p>
+          </div>
+        </div>
+
+        <p class="header-desc">
+          A powerful project-based, sidebar-first window manager for macOS. Tab groups, intent zones, multi-monitor support, and projects that just make sense.
+        </p>
+
+        <div class="header-actions">
+          <a href="https://github.com/ZimengXiong/winmux/releases/download/v0.2.1/WinMux-0.2.1.zip" class="action-btn action-download">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 15V3"></path><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m7 10 5 5 5-5"></path>
+            </svg>
+            <span>Download <span class="btn-sub">v0.2.1 • 9.2 MiB</span></span>
+          </a>
+          <a href="https://github.com/zimengxiong/winmux" target="_blank" rel="noopener noreferrer" class="action-btn action-secondary">
+            <span>GitHub</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- In-depth Demo Player -->
+      <div class="overview-video-container">
+        <video id="sas-video" playsinline preload="metadata" src="/demo.mp4" class="overview-video">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay-play" id="sas-play-overlay">
+          <button type="button" class="play-btn-circle" aria-label="Play video">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="video-controls-bar">
+        <div class="video-progress-track" id="sas-progress-track">
+          <div class="video-progress-fill" id="sas-progress-fill"></div>
+        </div>
+        <div class="video-controls-row">
+          <div class="video-controls-left">
+            <button type="button" class="video-ctrl-btn" id="sas-toggle-play" aria-label="Toggle Play">
+              <svg id="sas-icon-play" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+              <svg id="sas-icon-pause" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:none">
+                <rect x="6" y="4" width="4" height="16"></rect>
+                <rect x="14" y="4" width="4" height="16"></rect>
+              </svg>
+            </button>
+            <span class="video-time-display" id="sas-time-display">0:00 / 0:00</span>
+          </div>
+          <button type="button" class="video-ctrl-btn" id="sas-fullscreen" aria-label="Fullscreen">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 3H5a2 2 0 0 0-2 2v3"></path>
+              <path d="M21 8V5a2 2 0 0 0-2-2h-3"></path>
+              <path d="M3 16v3a2 2 0 0 0 2 2h3"></path>
+              <path d="M16 21h3a2 2 0 0 0 2-2v-3"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="overview-section">
+        <p class="heading-line"># features at a glance</p>
+        
+        <div class="features-list">
+          <div class="feature-item">
+            <span class="feature-title">integrated status bar</span>
+            <p class="feature-desc">native swift sidebar indicator. always in sync with windows &amp; spaces with zero lag.</p>
+          </div>
+
+          <div class="feature-item">
+            <span class="feature-title">intent zones</span>
+            <p class="feature-desc">arrange, tile, and stack windows intuitively via hover zones without memorizing keyboard chords.</p>
+          </div>
+
+          <div class="feature-item">
+            <span class="feature-title">tab groups</span>
+            <p class="feature-desc">combine any unrelated applications (finder, browser, terminal) into unified tabbed windows.</p>
+          </div>
+
+          <div class="feature-item">
+            <span class="feature-title">multi-monitor virtual desktops</span>
+            <p class="feature-desc">spaces behave as lightweight virtual views with no duplicate ghost spaces across monitors.</p>
+          </div>
+
+          <div class="feature-item">
+            <span class="feature-title">zero SIP required</span>
+            <p class="feature-desc">built on the Aerospace virtualization framework without compromising macOS system security.</p>
+          </div>
+
+          <div class="feature-item">
+            <span class="feature-title">single-tap shortcuts</span>
+            <p class="feature-desc">single-tap modifier keys to launch browser profiles or workspaces in under 2 seconds.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- View 3: ESAS (Even Shorter Attention Span Quick Tour on /esas) -->
+    <div id="view-esas" class="page-view" style="display: none;">
+      <div class="sas-header">
+        <div class="sas-nav-row">
+          <a href="/" class="back-link">&lt;-- back to essay</a>
+          <a href="/sas" class="sub-sas-link" id="link-to-sas">[ in-depth video walkthrough ]</a>
+        </div>
+        
+        <div class="header-branding" style="margin-bottom: 16px;">
+          <img src="/winmux-logo.svg" alt="winmux logo" class="header-logo" />
+          <h1 class="header-title" style="margin: 0 !important;">
+            <span class="wm-w">w</span><span class="wm-i">i</span><span class="wm-n">n</span><span class="wm-m">m</span><span class="wm-u">u</span><span class="wm-x">x</span>
+          </h1>
+        </div>
+
+        <div class="header-actions">
+          <a href="https://github.com/ZimengXiong/winmux/releases/download/v0.2.1/WinMux-0.2.1.zip" class="action-btn action-download">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 15V3"></path><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m7 10 5 5 5-5"></path>
+            </svg>
+            <span>Download <span class="btn-sub">v0.2.1 • 9.2 MiB</span></span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick 52s Tour Player -->
+      <div class="overview-video-container">
+        <video id="esas-video" playsinline preload="metadata" muted src="/demo3.mp4" class="overview-video">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay-play" id="esas-play-overlay">
+          <button type="button" class="play-btn-circle" aria-label="Play video">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="video-controls-bar">
+        <div class="video-progress-track" id="esas-progress-track">
+          <div class="video-progress-fill" id="esas-progress-fill"></div>
+        </div>
+        <div class="video-controls-row">
+          <div class="video-controls-left">
+            <button type="button" class="video-ctrl-btn" id="esas-toggle-play" aria-label="Toggle Play">
+              <svg id="esas-icon-play" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+              <svg id="esas-icon-pause" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:none">
+                <rect x="6" y="4" width="4" height="16"></rect>
+                <rect x="14" y="4" width="4" height="16"></rect>
+              </svg>
+            </button>
+            <span class="video-time-display" id="esas-time-display">0:00 / 0:52</span>
+          </div>
+          <button type="button" class="video-ctrl-btn" id="esas-fullscreen" aria-label="Fullscreen">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 3H5a2 2 0 0 0-2 2v3"></path>
+              <path d="M21 8V5a2 2 0 0 0-2-2h-3"></path>
+              <path d="M3 16v3a2 2 0 0 0 2 2h3"></path>
+              <path d="M16 21h3a2 2 0 0 0 2-2v-3"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="overview-section">
+        <p class="heading-line"># features at a glance</p>
+        
+        <ul class="features-concise-list">
+          <li>integrated status bar</li>
+          <li>intent zones</li>
+          <li>tab groups</li>
+          <li>multi-monitor virtual desktops</li>
+          <li>zero SIP required</li>
+          <li>single-tap shortcuts</li>
+        </ul>
+      </div>
+    </div>
   </main>
+
+  <script type="module" src="/main.js"></script>
 </body>
 </html>

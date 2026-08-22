@@ -1,0 +1,15 @@
+{
+  "name": "winmux-landing-page",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "highlight.js": "^11.12.0",
+    "marked": "^18.0.10",
+    "vite": "^8.2.2"
+  }
+}
