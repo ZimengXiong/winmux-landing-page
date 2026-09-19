@@ -1,6 +1,6 @@
 ![](hero-winmux-a.png) ![](hero-winmux-b.png)
 
-winmux solves four main problems with existing window managers:
+WinMux solves four main problems with existing window managers:
 1. they have no idea what spaces actually are
 2. they don't show you where your stuff is
 3. they let you have too many spaces
@@ -86,7 +86,7 @@ this also means that empty spaces FUNDAMENTALLY SHOULD NOT EXIST. there is NO PO
 
 the only type of empty workspace we allow is the N+1 (where N is the last occupied workspace). this allows you to temporarily create an empty workspace to open new windows in, but if you leave without doing so, the workspace gets garbage-collected.
 
-winmux does both of these well, and supports multi-monitor in an intuitive way like nothing else i have tried
+WinMux does both of these well, and supports multi-monitor in an intuitive way like nothing else i have tried
 
 # WHERE ARE ALL MY SPACES? FIND ME MY WINDOWS!
 when you install a window manager like [AeroSpace](https://github.com/nikitabobko/AeroSpace), you are left quite baffled at where things are. am i on workspace A, B, or C? how do i know? oh wait, there's a menu bar icon, let me click that...
@@ -103,7 +103,7 @@ and this is a fine idea, if it wasn't for the fact this is external to the windo
 
 it's a fine idea, if it wasn't for the fact that the menu bar also lives at the top, meaning you have to hide the application's `File->` menu and all your menu bar icons. yes, you can configure it to be on the sides of your screen, but such a thin bar doesn't allow much information to be shown vertically.
 
-the solution really is to have a status bar integrated with your window manager, and winmux does exactly that
+the solution really is to have a status bar integrated with your window manager, and WinMux does exactly that
 
 ![status bar collapsed](statusbar-collapsed.png) ![status bar expanded](statusbar-expanded.png)
 
@@ -138,7 +138,7 @@ yet again, this is a solved problem, and you have already used them before: brow
 
 you don't open a new window each time you want to visit a new website, you open a new **tab**.
 
-winmux brings the power of tabs to window stacking, so you can turn two unrelated applications (e.g. [Finder](https://en.wikipedia.org/wiki/macOS_Finder) and your browser) into a singular, tabbed "window":
+WinMux brings the power of tabs to window stacking, so you can turn two unrelated applications (e.g. [Finder](https://en.wikipedia.org/wiki/macOS_Finder) and your browser) into a singular, tabbed "window":
 
 ![if they are windows, they can be tabbed](/tab-groups.mp4)
 
@@ -148,13 +148,13 @@ and yes, you can configure whether new windows opened while focused on a tab gro
 
 # zero click config
 
-winmux doesn't require disabling [SIP](https://en.wikipedia.org/wiki/System_Integrity_Protection) (it's built on the fantastic virtualization framework of [AeroSpace](https://github.com/nikitabobko/AeroSpace)), nor does it require you to write a config file! (still uses it as a single source of truth, but you don't ever need to see it). it ships with (my) defaults or adopts existing AeroSpace configurations. you can do (most) things via a GUI :)
+WinMux doesn't require disabling [SIP](https://en.wikipedia.org/wiki/System_Integrity_Protection) (it's built on the fantastic virtualization framework of [AeroSpace](https://github.com/nikitabobko/AeroSpace)), nor does it require you to write a config file! (still uses it as a single source of truth, but you don't ever need to see it). it ships with (my) defaults or adopts existing AeroSpace configurations. you can do (most) things via a GUI :)
 
 ![(yes i know the keyboard shortcut input fields look weird, i'm trying to figure that out, it's a macOS 27 beta thing)](winmux-settings-gui.gif)
 
 # tap tap tap
 
-winmux supports a special type of keyboard shortcut: single taps:
+WinMux supports a special type of keyboard shortcut: single taps:
 
 ```
 [mode.main.binding-tap]
@@ -173,8 +173,8 @@ how long does it take you to launch two browser windows of different profiles? i
 
 ~*~
 
-that's all i have to say. i hope you now have a better understanding of why winmux was designed the way it is 🙂.
+that's all i have to say. i hope you now have a better understanding of why WinMux was designed the way it is 🙂.
 
-if you're tired of guessing where your windows are or fighting macOS spaces on external monitors, winmux is ready for you.
+if you're tired of guessing where your windows are or fighting macOS spaces on external monitors, WinMux is ready for you.
 
-winmux is open source and permissively licensed. give it a try: https://github.com/zimengxiong/winmux
+WinMux is open source and permissively licensed. give it a try: https://github.com/zimengxiong/winmux
