@@ -254,11 +254,46 @@ function attachVideoControls(prefix) {
   }
 }
 
+async function loadLatestRelease() {
+  const downloadLinks = document.querySelectorAll('.action-download');
+  const releasesUrl = 'https://github.com/ZimengXiong/winmux/releases/latest';
+
+  downloadLinks.forEach((link) => {
+    link.href = releasesUrl;
+    const subtitle = link.querySelector('.btn-sub');
+    if (subtitle) subtitle.textContent = 'latest release';
+  });
+
+  try {
+    const response = await fetch('https://api.github.com/repos/ZimengXiong/winmux/releases/latest', {
+      cache: 'no-store',
+      headers: { Accept: 'application/vnd.github+json' },
+    });
+    if (!response.ok) return;
+
+    const release = await response.json();
+    const archive = release.assets?.find((asset) =>
+      /^WinMux-[^/]+\.zip$/.test(asset.name)
+    );
+    if (!archive) return;
+
+    const sizeMiB = (archive.size / 1024 / 1024).toFixed(1);
+    downloadLinks.forEach((link) => {
+      link.href = archive.browser_download_url;
+      const subtitle = link.querySelector('.btn-sub');
+      if (subtitle) subtitle.textContent = `${release.tag_name} • ${sizeMiB} MiB`;
+    });
+  } catch {
+    // Keep the latest-release page as a reliable fallback.
+  }
+}
+
 // Initial setup
 renderMarkdown(rawMarkdown);
 initRouter();
 attachVideoControls('sas');
 attachVideoControls('esas');
+loadLatestRelease();
 
 // Vite HMR
 if (import.meta.hot) {
