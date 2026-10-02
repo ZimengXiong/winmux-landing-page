@@ -303,7 +303,7 @@ async function loadVectorArtwork() {
     if (artwork.localName !== 'svg') return;
 
     artwork.classList.add('artwork-image');
-    artwork.setAttribute('role', 'img');
+    artwork.setAttribute('role', 'group');
     artwork.setAttribute('aria-label', container.querySelector('img').alt);
     container.replaceChildren(artwork);
   } catch {

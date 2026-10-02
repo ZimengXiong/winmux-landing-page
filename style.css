@@ -100,6 +100,51 @@ body {
   margin: 0;
 }
 
+.artwork-image text {
+  -webkit-user-select: text;
+  user-select: text;
+  cursor: text;
+}
+
+.artwork-image text::selection,
+.artwork-image tspan::selection {
+  background: #7cff9b;
+  color: #0d0d0d;
+  fill: #0d0d0d;
+}
+
+.artwork-callout {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 180ms ease, filter 180ms ease;
+}
+
+.artwork-callout rect {
+  transition: fill 180ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .artwork-callout:hover {
+    transform: translateY(-12px) scale(1.035);
+    filter: drop-shadow(0 16px 20px rgb(0 0 0 / 30%));
+  }
+
+  .artwork-callout:hover rect {
+    fill: #fffd66;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .artwork-callout,
+  .artwork-callout rect {
+    transition: none;
+  }
+
+  .artwork-callout:hover {
+    transform: none;
+  }
+}
+
 #view-sas,
 #view-esas {
   max-width: 680px;
