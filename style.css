@@ -120,6 +120,20 @@ body {
   fill: #000000;
 }
 
+.artwork-callout:not(.artwork-download) text::selection,
+.artwork-callout:not(.artwork-download) tspan::selection {
+  background: #7cff9b;
+  color: #000000;
+  fill: #000000;
+}
+
+.artwork-callout:not(.artwork-download) text::-moz-selection,
+.artwork-callout:not(.artwork-download) tspan::-moz-selection {
+  background: #7cff9b;
+  color: #000000;
+  fill: #000000;
+}
+
 .artwork-callout {
   transform-box: fill-box;
   transform-origin: center;
