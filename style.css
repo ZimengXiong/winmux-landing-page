@@ -126,6 +126,7 @@ body {
 .artwork-download,
 .artwork-download text {
   cursor: pointer;
+  text-decoration: none;
 }
 
 .artwork-download:focus-visible {

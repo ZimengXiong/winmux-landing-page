@@ -269,7 +269,7 @@ async function loadLatestRelease() {
   const releasesUrl = 'https://github.com/ZimengXiong/winmux/releases/latest';
 
   downloadLinks.forEach((link) => {
-    link.href = releasesUrl;
+    link.setAttribute('href', releasesUrl);
     const subtitle = link.querySelector('.btn-sub');
     if (subtitle) subtitle.textContent = 'latest release';
   });
@@ -284,7 +284,7 @@ async function loadLatestRelease() {
 
     const sizeMiB = (archive.size / 1024 / 1024).toFixed(1);
     downloadLinks.forEach((link) => {
-      link.href = archive.browser_download_url;
+      link.setAttribute('href', archive.browser_download_url);
       const subtitle = link.querySelector('.btn-sub');
       if (subtitle) subtitle.textContent = `${release.tag_name} • ${sizeMiB} MiB`;
       const artworkLabel = link.querySelector('.release-label');
