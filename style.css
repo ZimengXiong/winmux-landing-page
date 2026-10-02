@@ -108,9 +108,16 @@ body {
 
 .artwork-image text::selection,
 .artwork-image tspan::selection {
-  background: #7cff9b;
-  color: #0d0d0d;
-  fill: #0d0d0d;
+  background: var(--accent-yellow);
+  color: #000000;
+  fill: #000000;
+}
+
+.artwork-image text::-moz-selection,
+.artwork-image tspan::-moz-selection {
+  background: var(--accent-yellow);
+  color: #000000;
+  fill: #000000;
 }
 
 .artwork-callout {
