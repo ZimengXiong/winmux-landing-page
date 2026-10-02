@@ -50,14 +50,88 @@ body {
   padding: 32px;
   min-height: 100vh;
   background-color: var(--bg);
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 .content {
-  max-width: 680px;
+  --page-width: min(calc(100vw - 64px), 1920px);
+  --essay-gap: clamp(32px, 4vw, 80px);
+  max-width: 1920px;
   width: 100%;
-  margin: 0;
+  margin: 0 auto;
   text-align: left;
+}
+
+.essay-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 620px) minmax(0, 1fr);
+  gap: var(--essay-gap);
+  align-items: start;
+}
+
+.essay-copy {
+  grid-column: 1;
+  grid-row: 1;
+  min-width: 0;
+}
+
+.essay-artwork {
+  position: fixed;
+  top: 50%;
+  right: max(32px, calc((100vw - 1920px) / 2));
+  width: calc(var(--page-width) - 620px - var(--essay-gap));
+  transform: translateY(-50%);
+  min-width: 0;
+}
+
+.artwork-frame {
+  display: block;
+  overflow: hidden;
+}
+
+.artwork-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: calc(100dvh - 64px);
+  object-fit: contain;
+  border: none;
+  background: transparent;
+  margin: 0;
+}
+
+#view-sas,
+#view-esas {
+  max-width: 680px;
+}
+
+@media (max-width: 1199px) {
+  #view-essay {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .essay-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .essay-artwork {
+    position: static;
+    width: 100%;
+    transform: none;
+  }
+
+  .artwork-image {
+    max-height: none;
+  }
+
+  .essay-copy {
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+  }
 }
 
 /* ==========================================================================
@@ -70,6 +144,7 @@ body {
   justify-content: space-between;
   margin-bottom: 24px;
   width: 100%;
+  max-width: 620px;
 }
 
 .essay-nav-brand {

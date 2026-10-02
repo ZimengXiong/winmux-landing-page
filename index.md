@@ -1,5 +1,3 @@
-![](hero-winmux-a.png) ![](hero-winmux-b.png)
-
 WinMux solves four main problems with existing window managers:
 1. they have no idea what spaces actually are
 2. they don't show you where your stuff is
