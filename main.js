@@ -37,7 +37,7 @@ marked.use({
       if (isVideo) {
         return `
           <figure class="media-block">
-            <video controls muted playsinline preload="metadata" src="${href}"${titleAttr} class="media-video">
+            <video controls muted playsinline preload="none" src="${href}"${titleAttr} class="media-video">
               Your browser does not support the video tag.
             </video>
             ${captionHtml}
@@ -295,32 +295,7 @@ async function loadLatestRelease() {
   }
 }
 
-// Inline the vector artwork so its callouts are selectable text. The image
-// fallback uses the same SVG, keeping the artwork identical while it loads.
-async function loadVectorArtwork() {
-  const container = document.getElementById('artwork-visual');
-  if (!container) return;
-
-  try {
-    const response = await fetch('/winmux-overview.svg');
-    if (!response.ok) return;
-
-    const document = new DOMParser().parseFromString(await response.text(), 'image/svg+xml');
-    const artwork = document.documentElement;
-    if (artwork.localName !== 'svg') return;
-
-    artwork.classList.add('artwork-image');
-    artwork.setAttribute('role', 'group');
-    artwork.setAttribute('aria-label', container.querySelector('img').alt);
-    container.replaceChildren(artwork);
-    loadLatestRelease();
-  } catch {
-    // Keep the SVG image if it cannot be inlined.
-  }
-}
-
 // Initial setup
-loadVectorArtwork();
 renderMarkdown(rawMarkdown);
 initRouter();
 attachVideoControls('sas');

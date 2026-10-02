@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="4520" height="3000" viewBox="100 200 4520 3000" fill="none" class="artwork-image" role="group" aria-label="WinMux's macOS interface with a collapsible sidebar, tabbed windows, drag and drop between spaces, workspaces grouped into projects, and drag and drop tiling.">
+<title>WinMux: an intuitive window manager</title><g clip-path="url(#clip0_1_5)">
+<rect x="428" y="536" width="4096" height="2376" rx="33" fill="url(#pattern0_1_5)" />
+<text x="2492" y="393" font-family="Arial, Helvetica, sans-serif" font-size="192" text-anchor="middle" class="artwork-heading" xml:space="preserve"><tspan fill="white">an </tspan><tspan fill="#7CFF9B">Intuitive </tspan><tspan fill="#2DCBFF">Window Manager</tspan></text><g class="artwork-callout"><rect x="3419" y="830" width="927" height="163" fill="#FFFB00" />
+<text x="3882.5" y="948" fill="#0D0D0D" font-family="Arial, Helvetica, sans-serif" font-size="96" text-anchor="middle"><tspan x="3882.5" dy="0">Tab your Windows</tspan></text></g><g class="artwork-callout"><rect x="1165.61" y="993" width="866.199" height="170.734" fill="#FFFB00" />
+<text x="1598.71" y="1115" fill="#0D0D0D" font-family="Arial, Helvetica, sans-serif" font-size="96" text-anchor="middle"><tspan x="1598.71" dy="0">Collapsible Sidebar</tspan></text></g><g class="artwork-callout"><rect x="1285" y="2433" width="752" height="236" fill="#FFFB00" />
+<text x="1661" y="2533" fill="#0D0D0D" font-family="Arial, Helvetica, sans-serif" font-size="80" text-anchor="middle"><tspan x="1661" dy="0">Group Workspaces</tspan><tspan x="1661" dy="96.0">Into Projects</tspan></text></g><g class="artwork-callout"><rect x="2667" y="2845" width="1039" height="318" fill="#FFFB00" />
+<text x="3186.5" y="2980" fill="#0D0D0D" font-family="Arial, Helvetica, sans-serif" font-size="96" text-anchor="middle"><tspan x="3186.5" dy="0">Drag n Drop to Tile,</tspan><tspan x="3186.5" dy="115.19999999999999">&amp; lots more!</tspan></text></g><g class="artwork-callout"><rect x="169" y="1693" width="905" height="256" fill="#FFFB00" />
+<text x="621.5" y="1801" fill="#0D0D0D" font-family="Arial, Helvetica, sans-serif" font-size="80" text-anchor="middle"><tspan x="621.5" dy="0">Drag&amp;Drop Windows</tspan><tspan x="621.5" dy="96.0">Across Spaces</tspan></text></g><path d="M2970.32 747.241C2965.48 749.273 2963.21 754.842 2965.24 759.679L2998.35 838.507C3000.39 843.344 3005.95 845.618 3010.79 843.586C3015.63 841.554 3017.9 835.986 3015.87 831.149L2986.44 761.079L3056.51 731.646C3061.34 729.614 3063.62 724.046 3061.59 719.208C3059.55 714.371 3053.99 712.097 3049.15 714.129L2970.32 747.241ZM3427 941L3430.59 932.205L2977.59 747.205L2974 756L2970.41 764.795L3423.41 949.795L3427 941Z" fill="#FFFB00" />
+<path d="M662.921 2543.7C658.889 2547.06 658.342 2553.05 661.699 2557.08L716.407 2622.78C719.764 2626.82 725.754 2627.36 729.786 2624.01C733.818 2620.65 734.366 2614.66 731.009 2610.63L682.379 2552.22L740.785 2503.59C744.817 2500.24 745.364 2494.25 742.007 2490.21C738.65 2486.18 732.66 2485.63 728.628 2488.99L662.921 2543.7ZM1304 2609L1304.86 2599.54L669.864 2541.54L669 2551L668.136 2560.46L1303.14 2618.46L1304 2609Z" fill="#FFFB00" />
+<g transform="rotate(-3 1804.5 3070)"><a class="artwork-callout artwork-download action-download" href="https://github.com/ZimengXiong/WinMux/releases/latest" aria-label="Download WinMux for macOS" tabindex="0"><rect x="1285" y="2970" width="1039" height="200" fill="#7CFF9B" /><text x="1804.5" y="3060" fill="#0D0D0D" font-family="Arial, Helvetica, sans-serif" font-size="96" text-anchor="middle" xml:space="preserve" font-weight="400">Download!</text><text x="1804.5" y="3140" fill="#0D0D0D" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="400" text-anchor="middle" class="release-label">v0.5.6 · 7.5 MiB</text></a></g></g>
+<defs>
+<pattern id="pattern0_1_5" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_1_5" transform="scale(0.000244141 0.000420875)" />
+</pattern>
+<clipPath id="clip0_1_5">
+<rect width="4984" height="3322" fill="white" />
+</clipPath>
+<image id="image0_1_5" width="4096" height="2376" preserveAspectRatio="none" href="/winmux-interface.a0b30c9a6506.webp" />
+</defs>
+</svg>
