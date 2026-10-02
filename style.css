@@ -136,6 +136,10 @@ body {
   text-decoration: none;
 }
 
+.artwork-image .artwork-download {
+  font-weight: 400;
+}
+
 .artwork-download:focus-visible {
   outline: none;
 }
@@ -153,6 +157,10 @@ body {
 
   .artwork-callout:hover rect {
     fill: #fffd66;
+  }
+
+  .artwork-download:hover rect {
+    fill: #9affb1;
   }
 }
 

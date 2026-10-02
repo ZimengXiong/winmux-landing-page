@@ -288,7 +288,7 @@ async function loadLatestRelease() {
       const subtitle = link.querySelector('.btn-sub');
       if (subtitle) subtitle.textContent = `${release.tag_name} • ${sizeMiB} MiB`;
       const artworkLabel = link.querySelector('.release-label');
-      if (artworkLabel) artworkLabel.textContent = ` (${release.tag_name.replace(/^v/, '')} ${sizeMiB}MiB)`;
+      if (artworkLabel) artworkLabel.textContent = `${release.tag_name} · ${sizeMiB} MiB`;
     });
   } catch {
     // Keep the latest-release page as a reliable fallback.
