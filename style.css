@@ -123,6 +123,20 @@ body {
   transition: fill 180ms ease;
 }
 
+.artwork-download,
+.artwork-download text {
+  cursor: pointer;
+}
+
+.artwork-download:focus-visible {
+  outline: none;
+}
+
+.artwork-download:focus-visible rect {
+  stroke: #7cff9b;
+  stroke-width: 10px;
+}
+
 @media (hover: hover) and (pointer: fine) {
   .artwork-callout:hover {
     transform: translateY(-12px) scale(1.035);
@@ -151,9 +165,8 @@ body {
 }
 
 @media (max-width: 1199px) {
-  #view-essay {
-    max-width: 800px;
-    margin: 0 auto;
+  #view-essay .essay-nav-header {
+    max-width: none;
   }
 
   .essay-layout {
@@ -165,6 +178,8 @@ body {
   .essay-artwork {
     position: static;
     width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
     transform: none;
   }
 
