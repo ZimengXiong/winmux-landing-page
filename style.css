@@ -194,7 +194,7 @@ body {
   max-width: 680px;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1599px) {
   #view-essay .essay-nav-header {
     max-width: none;
   }
