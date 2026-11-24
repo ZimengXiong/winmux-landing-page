@@ -176,3 +176,5 @@ that's all i have to say. i hope you now have a better understanding of why WinM
 if you're tired of guessing where your windows are or fighting macOS spaces on external monitors, WinMux is ready for you.
 
 WinMux is open source and permissively licensed. give it a try: https://github.com/zimengxiong/winmux
+
+made by [Zimeng Xiong](https://zimengxiong.com/).
